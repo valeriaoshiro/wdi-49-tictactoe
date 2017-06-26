@@ -63,7 +63,6 @@ function checkWin(){
     } // check middle row
     else if(board[3] !== null && board[3] === board[4] && board[3] === board[5]){
         whosWinner = turn ? player1 : player2;
-        // tbodyEl.removeEventListener('click', handleClick);
     } // check bottom row 
     else if(board[6] !== null && board[6] === board[7] && board[6] === board[8]){
         whosWinner = turn ? player1 : player2;
