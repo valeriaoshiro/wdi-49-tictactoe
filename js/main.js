@@ -11,18 +11,6 @@ var winner = document.getElementById('winner');
 initialize();
 render();
 
-function handleClick(evt){
-    squareClicked = evt.target;
-    // users cannot click on a square that was already used.
-    // the square needs to be null
-    if(board[squareClicked.id] === null){
-        board[squareClicked.id] = turn;
-        checkWin();
-        render();
-        turn = !turn;
-    }    
-}
-
 function initialize(){
     board = [];
     for(var i = 0; i < 9; i++){
@@ -33,10 +21,22 @@ function initialize(){
     squares.forEach(function(el){
         el.textContent = '';
     });
-    winner.textContent = whosWinner = squareClicked =  '';
+    whosWinner = squareClicked =  '';
     // Event Listeners
     tbodyEl.addEventListener('click', handleClick);
     buttonEl.addEventListener('click', initialize);
+}
+
+function handleClick(evt){
+    squareClicked = evt.target;
+    // users cannot click on a square that was already used.
+    // the square needs to be null
+    if(board[squareClicked.id] === null){
+        board[squareClicked.id] = turn;
+        checkWin();
+        render();
+        turn = !turn;
+    }    
 }
 
 function render(){
