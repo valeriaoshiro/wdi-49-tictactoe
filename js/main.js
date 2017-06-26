@@ -4,7 +4,7 @@ var board, turn, squareClicked, whosWinner, gameFinished;
 /*----- cached element references -----*/
 var tbodyEl = document.querySelector('tbody');
 var buttonEl = document.querySelector('button');
-var squares = document.querySelectorAll('.square');
+var squares = document.querySelectorAll('td');
 var winner = document.getElementById('winner');
 
 /*----- functions -----*/
