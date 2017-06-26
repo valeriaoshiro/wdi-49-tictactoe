@@ -41,9 +41,9 @@ function initialize(){
 
 function render(){
     if(turn){
-        squareClicked.textContent = "X";
+        squareClicked.textContent = 'X';
     } else {
-        squareClicked.textContent = "O";
+        squareClicked.textContent = 'O';
     }
 
     if(whosWinner !== '') {
